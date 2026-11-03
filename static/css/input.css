@@ -1,2 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  --color-page: #ffffff;
+  --color-well: #f2f2f3;
+  --color-raised: #ffffff;
+  --color-wash: rgba(0, 0, 0, 0.035);
+  --color-wash-hover: rgba(0, 0, 0, 0.055);
+  --color-ink: #18181b;
+  --color-ink-2: #5d5d66;
+  --color-ink-3: #6b6b73;
+  --color-line: rgba(0, 0, 0, 0.07);
+  --color-line-strong: rgba(0, 0, 0, 0.16);
+}
+
+.dark {
+  --color-page: #121212;
+  --color-well: #1b1b1e;
+  --color-raised: #1f1f22;
+  --color-wash: rgba(255, 255, 255, 0.05);
+  --color-wash-hover: rgba(255, 255, 255, 0.08);
+  --color-ink: #fafafa;
+  --color-ink-2: #a8a8ad;
+  --color-ink-3: #8b8b92;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.18);
+}
