@@ -15,9 +15,9 @@ Inspirado en los principios de Extreme Programming (XP).
 
 | Habilidad / Comando | Propósito | Reglas de Oro |
 |---|---|---|
-| [`/backlog`](.agents/skills/backlog/SKILL.md) | Convierte una idea o funcionalidad en un backlog de historias de usuario verticales (de una línea). | No inventa requerimientos, no crea tareas técnicas ni estimaciones. |
-| [`/story`](.agents/skills/story/SKILL.md) | Toma **una** historia del backlog, define 2–3 criterios de aceptación Given/When/Then y un mini plan (≤5 puntos). | No escribe código. Si requiere más de 3 criterios, propone dividir la historia. |
-| [`/pair`](.agents/skills/pair/SKILL.md) | Pair programming: la IA conduce (driver) y tú navegas. Un test → rojo → código mínimo (~50 líneas) → verde → esperar aprobación. | No hace commits, no edita tests para forzar el pase, no agrega extras no solicitados. |
+| [`/backlog`](.agent/skills/backlog/SKILL.md) | Convierte una idea o funcionalidad en un backlog de historias de usuario verticales (de una línea). | No inventa requerimientos, no crea tareas técnicas ni estimaciones. |
+| [`/story`](.agent/skills/story/SKILL.md) | Toma **una** historia del backlog, define 2–3 criterios de aceptación Given/When/Then y un mini plan (≤5 puntos). | No escribe código. Si requiere más de 3 criterios, propone dividir la historia. |
+| [`/pair`](.agent/skills/pair/SKILL.md) | Pair programming: la IA conduce (driver) y tú navegas. Un test → rojo → código mínimo (~50 líneas) → verde → esperar aprobación. | No hace commits, no edita tests para forzar el pase, no agrega extras no solicitados. |
 
 ### Principios Fundamentales
 - **No inventar requerimientos:** Lo que falte se pregunta; nunca se asume.
@@ -34,15 +34,15 @@ Inspirado en los principios de Extreme Programming (XP).
 - **Base de Datos:** SQLite por defecto para desarrollo local (intercambiable por PostgreSQL u otros motores soportados por Django)
 - **Frontend:** Django Templates + Tailwind CSS (compilado localmente) + Skill **Impeccable** para diseño y revisión de UI
 - **Testing:** Pytest / Pytest-Django o Django TestCase nativo
-- **Estándares y Guía Técnica:** [`.agents/django-fullstack.md`](.agents/django-fullstack.md)
-- **Contrato de Agentes:** [`.agents/AGENTS.md`](.agents/AGENTS.md)
+- **Estándares y Guía Técnica:** [`.agent/django-fullstack.md`](.agent/django-fullstack.md)
+- **Contrato de Agentes:** [`.agent/AGENTS.md`](.agent/AGENTS.md)
 
 ---
 
 ## 3. Estructura del Proyecto
 
 ```text
-├── .agents/                    # Contratos, estándares y habilidades ODD
+├── .agent/                     # Contratos, estándares y habilidades ODD
 │   ├── AGENTS.md               # Contrato y directrices de enrutamiento del agente
 │   ├── django-fullstack.md     # Convenciones y estándares Django Fullstack
 │   └── skills/                 # Skills para desarrollo asistido
@@ -89,8 +89,9 @@ python manage.py runserver
 ## 5. Cómo Iniciar un Nuevo Proyecto con esta Plantilla
 
 1. **Definir el problema:** Pide al agente iniciar con `/backlog` describiendo tu idea general.
-2. **Refinar la primera historia:** Ejecuta `/story` para definir los criterios de aceptación y el mini plan de la historia prioritaria.
-3. **Construir paso a paso:** Ejecuta `/pair` para iterar mediante ciclos TDD atómicos (test → rojo → código → verde) con la supervisión directa del desarrollador.
+2. **Definir el Sistema de Diseño (Paso 0 de Frontend):** El agente inspecciona la estructura y paleta de colores de [https://designeer.xyz](https://designeer.xyz) mediante MCP y genera el archivo `DESIGN.md` en la raíz del proyecto con los tokens y propuesta de layout en Tailwind CSS.
+3. **Refinar la primera historia:** Ejecuta `/story` para definir los criterios de aceptación y el mini plan de la historia prioritaria.
+4. **Construir paso a paso:** Ejecuta `/pair` para iterar mediante ciclos TDD atómicos (test → rojo → código → verde) con la supervisión directa del desarrollador y la skill `impeccable`.
 
 ---
 

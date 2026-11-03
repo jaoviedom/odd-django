@@ -32,10 +32,10 @@ Este documento define las directrices y estándares de desarrollo para trabajar 
 
 ## 3. Convenciones de Frontend (Django Templates + Tailwind CSS Local + Skill Impeccable)
 
-- **Uso de la Skill Impeccable para Diseño y Frontend:**
-  - Todo trabajo de interfaz visual (diseño, rediseño, maquetación, paleta, tipografía, microinteracciones, estados vacíos, componentes o revisión de UX) debe apoyarse en la skill **`impeccable`** (`.agent/skills/impeccable/`).
-  - Seguir sus directrices de diseño (jerarquía, legibilidad, modo de interfaz, craft floor y tokens en `DESIGN.md`).
-  - Utilizar sus herramientas y referencias para auditar la accesibilidad (WCAG 2.1 AA), responsive design y calidad visual antes de dar por buena una plantilla.
+- **Uso de la Skill Impeccable y Referencia Visual (Paso 0 Mandatorio de Frontend):**
+  - **Paso 0 - Inspección y Creación de `DESIGN.md`:** Antes de codificar cualquier plantilla o componente visual, el agente debe inspeccionar la estructura, tipografía y paleta de colores de [https://designeer.xyz](https://designeer.xyz) utilizando la herramienta MCP disponible (o navegador/inspección). Con base en esta referencia, el agente debe generar y mantener el archivo `DESIGN.md` en la raíz del proyecto, definiendo los tokens de color, escalas, componentes base y modo de interfaz en Tailwind CSS.
+  - Todo trabajo de interfaz visual (diseño, rediseño, maquetación, paleta, tipografía, microinteracciones, estados vacíos, componentes o revisión de UX) debe apoyarse en la skill **`impeccable`** (`.agent/skills/impeccable/`) y regirse estrictamente por las definiciones de `DESIGN.md`.
+  - Utilizar las directrices de `impeccable` (jerarquía, legibilidad, modo de interfaz, craft floor) y auditar la accesibilidad (WCAG 2.1 AA), responsive design y calidad visual antes de dar por buena una plantilla.
 
 - **Uso Mandatorio de Tailwind CSS Local:**
   - Tailwind CSS **siempre debe compilarse y servirse localmente** (nunca mediante CDN en producción ni entornos finales).
